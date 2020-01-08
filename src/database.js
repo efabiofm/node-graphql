@@ -5,5 +5,5 @@ export default () => {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
-  mongoose.connection.on('error', err => console.error(err));
+  mongoose.connection.on('error', error => console.error(error));
 };

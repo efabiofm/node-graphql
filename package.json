@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist; babel src -d dist --source-maps",
-    "start": "nodemon --exec babel-node src"
+    "start": "nodemon --exec babel-node src",
+    "root": "babel-node src/scripts/createRootUser.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.7",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^14.5.8",
