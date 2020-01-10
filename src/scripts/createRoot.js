@@ -6,7 +6,7 @@ import dbConnect from '../database';
     await dbConnect();
     const rootUser = await UserModel.findOne({ email: 'root' });
     if (rootUser) {
-      console.info('Root user already exists');
+      console.info('Root already exists');
       return;
     }
     await UserModel.create({
@@ -14,7 +14,7 @@ import dbConnect from '../database';
       email: 'root',
       password: 'root'
     });
-    console.info('Root user created');
+    console.info('Root created');
   } catch (error) {
     console.error(error);
   }

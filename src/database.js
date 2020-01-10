@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 export default () => {
-  mongoose.connect('mongodb://localhost:27017/cronux', {
+  mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });

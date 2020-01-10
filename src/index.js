@@ -12,4 +12,7 @@ app.use('/graphql', expressGraphQL({
   graphiql: true
 }));
 
-app.listen(3001, () => console.info('Server running on http://localhost:3001'));
+app.listen(
+  process.env.PORT,
+  () => console.info(`Server running on http://localhost:${process.env.PORT}`)
+);
